@@ -1,0 +1,16 @@
+{
+  "name": "wasm-click-counter",
+  "version": "1.0.0",
+  "description": "proof of concept wasm app with puppeteer integration testing",
+  "scripts": {
+    "test": "jest",
+    "build": "emcc src/click_counter.c -o dist/click-counter.js -s NO_EXIT_RUNTIME=1 -s \"EXPORTED_RUNTIME_METHODS=['ccall']\" -s LINKABLE=1 -s EXPORT_ALL=1 && cp src/*.html dist",
+    "start": "python -m http.server 8001 && chrome https://localhost:8001/dist/click-counter.html"
+  },
+  "devDependencies": {
+    "jest": "26.1.0",
+    "puppeteer": "13.0.1"
+  },
+  "author": "",
+  "license": "ISC"
+}
