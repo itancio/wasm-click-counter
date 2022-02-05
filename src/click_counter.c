@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include <emscripten/emscripten.h>
+//#include <emscripten/emscripten.h>
 
 struct ClickCounter {
     int clicks;

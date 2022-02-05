@@ -1,9 +1,9 @@
-# click-counter
+# wasm-click-counter
 A POC for using emscripten to generate WASM from C with a HTML front-end and Puppeteer for integration testing (unit testing TBD).
 
 ## Installation/dependencies
-- emscripten (and export `emcc` to the path)
-- node
+- emscripten (and export `emcc` to the path -- e.g. on Windows run `C:\Users\greg\AppData\Local\emsdk\emsdk_env.ps1`)
+- node/npm
 - python
 
 ## Building/running
