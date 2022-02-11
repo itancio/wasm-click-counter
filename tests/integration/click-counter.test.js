@@ -1,7 +1,6 @@
 const puppeteer = require("puppeteer");
 
-jest.setTimeout = 10000;
-const url = "http://localhost:8000/dist/click-counter.html"; // TODO move to env
+const url = "http://localhost:8000/dist"; // TODO move to env
 
 describe("click counter", () => {
   let browser;
