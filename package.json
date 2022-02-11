@@ -4,8 +4,9 @@
   "description": "proof of concept wasm app with puppeteer integration testing",
   "scripts": {
     "test": "jest",
-    "build": "emcc src/click_counter.c -o dist/click-counter.js -s NO_EXIT_RUNTIME=1 -s \"EXPORTED_RUNTIME_METHODS=['ccall']\" -s LINKABLE=1 -s EXPORT_ALL=1 && copy /Y src\\*.html dist",
-    "start": "python -m http.server 8000"
+    "build": "if not exist dist mkdir dist && emcc src/click_counter.c -o dist/click-counter.js -s NO_EXIT_RUNTIME=1 -s \"EXPORTED_RUNTIME_METHODS=['ccall']\" -s LINKABLE=1 -s EXPORT_ALL=1 && copy /Y src\\*.html dist",
+    "start": "python -m http.server 8000",
+    "deploy": "xcopy /E /I dist docs"
   },
   "devDependencies": {
     "jest": "^26.1.0",
