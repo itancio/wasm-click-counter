@@ -21,7 +21,7 @@ Make sure you've exported the path using `.\emsdk_env.ps1` described in the abov
 
 These are the build/run/test commands from `package.json`:
 - `npm run build` compiles the WASM from the `src/click-counter.c` file to the `dist` directory and copies all `.html` and `.js` files to the `dist` directory (there's no bundling step for the front-end yet).
-- `npm run start` starts the Python web server. Navigate to <http://localhost:8000/dist/click-counter.html> to use the application.
+- `npm run start` starts the Python web server. Navigate to <http://localhost:8000/dist> to use the application.
 - `npm run test` runs Jest/Puppeteer. This will fail if localhost from the above step isn't running.
 
 The typical development workflow is to run `npm run start`, then run `nodemon` to automatically execute `npm run build && npm run test` whenever a source file changes.
