@@ -33,6 +33,8 @@ I'm using the `gh-pages` branch and the `docs` folder to deploy to <https://ggor
 Unit testing possibilities:
 - <https://github.com/Snaipe/Criterion>
 - <https://github.com/rubenvannieuwpoort/c_unit_tests>
+- <https://github.com/sheredom/utest.h>
+- <https://github.com/google/googletest>
 
 Shrinking code size: <https://hacks.mozilla.org/2018/01/shrinking-webassembly-and-javascript-code-sizes-in-emscripten/>
 
