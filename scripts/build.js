@@ -3,7 +3,7 @@ const path = require("path");
 const {exec} = require("child_process");
 
 const emcc = `
-  emcc src/click_counter.c
+  emcc src/main.c src/counter.c
   -o dist/click-counter.js 
   -s NO_EXIT_RUNTIME=1
   -s LINKABLE=1
