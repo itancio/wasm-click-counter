@@ -6,3 +6,4 @@ node_modules/
 *.gch
 *.out
 *.exe
+utest.h
