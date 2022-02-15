@@ -1,6 +1,6 @@
 {
   "exec": "npm run build && npm run test",
-  "ext": "html js c cpp cc",
+  "ext": "html js h c cpp cc",
   "ignore": [
     ".git",
     "dist",
@@ -8,6 +8,6 @@
   ],
   "watch": [
     "src/",
-    "integration-tests/"
+    "tests/"
   ]
 }

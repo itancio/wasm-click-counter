@@ -1,3 +1,9 @@
 dist/
 node_modules/
 .DS_Store
+*.o
+*.so
+*.gch
+*.out
+*.exe
+utest.h

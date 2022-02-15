@@ -14,9 +14,17 @@ The main dependency is [Emscripten](https://emscripten.org/), which happens to d
 
 Once you have a prompt with the exported path using `emsdk_env.ps1`, clone or download this repo and run `cd ~/path/to/wasm-click-counter`.
 
+Download `utest.h`, e.g. `wget https://raw.githubusercontent.com/sheredom/utest.h/master/utest.h -O tests/unit/utest.h`.
+
 Finally, run `npm i` from the `wasm-click-counter` directory to install Jest, Nodemon and Puppeteer to `node_modules`.
 
 ## Windows build/run/test
+
+### Back-end (C)
+
+Add tests in `tests/unit` and run `make test` in that directory. Make sure you've downloaded [`utest.h`](https://github.com/sheredom/utest.h).
+
+### Front-end (HTML/WASM)
 Make sure you've exported the path using `.\emsdk_env.ps1` described in the above section.
 
 These are the build/run/test commands from `package.json`:
@@ -31,10 +39,13 @@ I'm using the `gh-pages` branch and the `docs` folder to deploy to <https://ggor
 
 ## Resources
 Unit testing possibilities:
-- <https://github.com/Snaipe/Criterion>
+- <https://github.com/sheredom/utest.h> (using this one for now)
 - <https://github.com/rubenvannieuwpoort/c_unit_tests>
-- <https://github.com/sheredom/utest.h>
+- <https://github.com/Snaipe/Criterion>
 - <https://github.com/google/googletest>
+- <https://github.com/libcheck/check>
+- <https://github.com/cgreen-devs/cgreen>
+- <https://p403n1x87.github.io/running-c-unit-tests-with-pytest.html>
 
 Shrinking code size: <https://hacks.mozilla.org/2018/01/shrinking-webassembly-and-javascript-code-sizes-in-emscripten/>
 

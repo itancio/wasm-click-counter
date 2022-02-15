@@ -1,16 +1,16 @@
 #include <stdio.h>
-
+#include "counter.h"
 //#include <emscripten/emscripten.h>
 
-struct ClickCounter {
-    int clicks;
-};
+/* this file is the interface for JS */
 
-static struct ClickCounter counter = {0};
+struct Counter c;
 
 int click(int num, char *s) {
+    // pass some random args from JS just to show that it can be done
     printf("click called with args[%d, %s]\n", num, s);
-    return ++counter.clicks;
+    counter_inc(&c);
+    return c.count;
 }
 
 int main() {
